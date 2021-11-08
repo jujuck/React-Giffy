@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { SelectedGif, GifList } from './components';
 
 function App() {
