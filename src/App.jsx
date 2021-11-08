@@ -1,5 +1,4 @@
-import SelectedGif from './components/SelectedGif';
-import GifList from './components/GifList';
+import { SelectedGif, GifList } from './components';
 
 function App() {
   return (
