@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.gif img {
+  width: 50%;
+}
+
 .gif-selected {
   width: 65vw;
 }

@@ -5,7 +5,7 @@ import { SelectedGif, GifList } from './components';
 
 function App() {
   const [gifs, setGifs] = useState([]);
-  const [selectedGif, setSelectedGif] = useState([]);
+  const [selectedGif, setSelectedGif] = useState(null);
 
   useEffect(() => {
     fetch(
@@ -16,8 +16,7 @@ function App() {
       .then((data) => {
         setGifs(data.data);
       });
-    console.log(selectedGif);
-  }, [selectedGif]);
+  }, []);
 
   const onUpdateSelectedGif = (gif) => {
     setSelectedGif(gif);
@@ -27,7 +26,7 @@ function App() {
     <div className="App">
       <h1 className="App-header">Giphy App</h1>
       <div className="content">
-        <SelectedGif />
+        <SelectedGif Gif={selectedGif} />
         <GifList gifs={gifs} onUpdateSelectedGif={onUpdateSelectedGif} />
       </div>
     </div>
