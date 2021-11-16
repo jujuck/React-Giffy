@@ -14,7 +14,6 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setGifs(data.data);
-        console.log(data.data);
       });
   }, []);
 
