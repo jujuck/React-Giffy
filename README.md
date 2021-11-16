@@ -1,67 +1,25 @@
-# React Simple Boilerplate
+# React Giphy
 
-Already intalled and configured:
-* ESLint (airbnb)
-* Prettier
-* Stylelint (standard)
-* Husky with lint-staged
+## Release / Update date
+**20/11/2021**
 
-Install with `npm install` or `yarn install`
+## Install
+Git clone && git install
 
-Run with `npm start` or `yarn start`
+## Description
+Create a page that will display a list of gifs and show the selected gif.
+![wireframe](./react-ghiphy.jpg)
 
-Lint with `npm run lint` or `yarn run lint`
+1. create the components according to the [diagram](./react-giphy-diagram.jpg):
+![diagram](./react-giphy-diagram.jpg)
 
-# Configure git (only for Windows)
+2. on `App`, fetch from giphy API. **Don't forget to create your API key!**
+```http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=5```
 
-Force git to use LF end of line everywhere:
+3. iterate over a list of 5 gifs, and display the `Gif` on `GifList`.
 
-```bash
-git config --global core.eol lf
-git config --global core.autocrlf input
-```
+4. when clicking on a `Gif`, it is displayed on `SelectedGif`
 
-If you've already cloned this repository, remove it and clone it again.
-
-# Configure Visual Studio Code
-
-## Install ESLint
-
-1. In Visual Studio Code go to View -> Extensions
-2. Search for `eslint`: [EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-3. Click Install
-
-## Install Prettier
-
-1. In Visual Studio Code go to View -> Extensions
-2. Search for `prettier code formatter`: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-3. Click Install
-
-## Install Stylelint
-
-1. In Visual Studio Code go to View -> Extensions
-2. Search for `stylelint`: [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-3. Click Install
-
-## Visual Studio Code Settings
-
-1. Go to File -> Preferences -> Settings.
-2. On the top right corner, click on the file icon `Open Settings (JSON)`.
-3. Add the code below before the last closing curly brace:
-
-```js
-{
-  /* existing configurations... */
-
-  /* began to copy setting from here */
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
-  "files.eol": "\n",
-  "editor.tabSize": 2,
-  /* do not copy after here */
-}
-```
-
-You might have to close and reopen Visual Studio Code after the plugins install and setting changes.
+## Requirements
+- React props, react state.
+- Fetch.
